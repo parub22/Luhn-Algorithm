@@ -44,7 +44,7 @@ public class LuhnAlgorithm {
     }
 
     public static void main(String[] args) {
-        String cardNum = "4101490065031703";
+        String cardNum = "6578490065031703";    //any credit card number
         System.out.println(checkLuhn(cardNum));
     }
 
