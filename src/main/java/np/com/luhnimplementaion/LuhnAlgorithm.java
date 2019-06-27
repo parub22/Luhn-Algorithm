@@ -1,9 +1,9 @@
 package np.com.luhnimplementaion;
 
 /**
- * Java program to implement Luhn algorithm.
+ * Java program to implement Luhn algorithm. It is used to validate credit card, PAN number, etc
  *
- * @author Parbati Budhathoki <parbati@moco.com.np>
+ * @author Parbati Budhathoki <parbatibudhathoki3@gmail.com>
  * @Creation Date Jun 24, 2019 10:52:56 AM
  */
 public class LuhnAlgorithm {
