@@ -18,19 +18,13 @@ public class LuhnAlgorithm {
         int cardlength = cardNum.length();
         int evenSum = 0, oddSum = 0, sum;
         for (int i = cardlength - 1; i >= 0; i--) {
-            System.out.println(cardNum.charAt(i));
-            int digit = Character.getNumericValue(cardNum.charAt(i));
-            if (i % 2 == 0) {
-                int multiplyByTwo = digit * 2;
-                if (multiplyByTwo > 9) {
-                    /* Add two digits to handle cases that make two digits after doubling */
-                    String mul = String.valueOf(multiplyByTwo);
-                    multiplyByTwo = Character.getNumericValue(mul.charAt(0)) + Character.getNumericValue(mul.charAt(1));
-                }
-                evenSum += multiplyByTwo;
-            } else {
+            int digit = Character.getNumericValue(cardNum.charAt(i));          
+              if (i % 2 == 0) {
                 oddSum += digit;
-            }
+            } else {
+                int multiplyByTwo = (digit * 2) < 9 ? (digit * 2) : (digit * 2) - 9;
+                evenSum += multiplyByTwo;
+            }                     
         }
         sum = evenSum + oddSum;
         if (sum % 10 == 0) {
